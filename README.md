@@ -42,7 +42,7 @@ Every script is deterministic (fixed random seeds): re-running it gives the same
 | `ml_compare.py` | Rules vs. Random Forest vs. Gradient Boosting: trial-level and frame-level confusion matrices, detection/latency figures, LaTeX tables. |
 | `tune.py` | Threshold exploration, run on the development split only. |
 | `figures.py` | Paper figures. |
-| `CHANGELOG.md` | Development history. |
+
 
 ## Evaluation discipline
 
