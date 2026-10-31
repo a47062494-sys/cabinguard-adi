@@ -1,0 +1,242 @@
+seizure        86/100 (86% [78-92]) lat med 6.50606081214039 IQR 6.423512243353095-6.727647554947881  final-correct 86 unspec 0 wrong 0  variants {'gtcs': (72, 72, 6.480899896153897), 'mild': (14, 28, 18.15648745502886)}
+syncope        91/100 (91% [84-96]) lat med 4.514008408655997 IQR 4.228398304367129-7.029578376960117  final-correct 91 unspec 0 wrong 0  variants {'collapse': (85, 90, 4.434088265492591), 'upright': (6, 10, 13.589442735316922)}
+stroke         94/100 (94% [87-98]) lat med 13.76284386691843 IQR 12.269044282667881-23.825089280422297  final-correct 93 unspec 0 wrong 1  variants {'clear': (59, 61, 12.762979085198566), 'mild': (35, 39, 16.147391535058865)}
+hypoglycemia   85/100 (85% [76-91]) lat med 185.47831011733996 IQR 151.4075793311953-214.85363104123408  final-correct 84 unspec 0 wrong 1  variants {'progressive': (85, 100, 185.47831011733996)}
+normal {'n': 150, 'hours': np.float64(9.166666666666774), 'false_verifications': 1, 'fv_rate': np.float64(0.10909090909090781), 'fv_upper95': np.float64(0.5175124929153296), 'preonset_hours': np.float64(5.078602030934192), 'preonset_false_verifications': 1, 'total_hours': np.float64(14.245268697600967), 'total_fv': 2, 'total_fv_upper95': np.float64(0.4419568177701174), 'prompts': 186, 'prompts_per_h': np.float64(20.29090909090885), 'prompts_in_drowsy': 102, 'prompt_edges': 197, 'drowsy_episodes': 63, 'drowsy_flagged': 63, 'imu_rhythmic_on_rough_road': 0.006216506125430922}
+upright stress {'n': 30, 'verified': 20, 'ci': (np.float64(0.47187995521011944), np.float64(0.8271257784739607)), 'lat_median': 14.343312603802126, 'final_correct': 18}
+baselines {
+"syncope_all": {
+"B1": {
+"n": 100,
+"rate": 0.18,
+"verified": 18,
+"lat_median": 6.503769177001658
+},
+"B2": {
+"n": 100,
+"rate": 0.06,
+"verified": 6,
+"lat_median": 14.603769177001773
+},
+"CG": {
+"n": 100,
+"rate": 0.91,
+"verified": 91,
+"lat_median": 4.514008408655997
+}
+},
+"syncope_pedal_held": {
+"B1": {
+"n": 52,
+"rate": 0.17307692307692307,
+"verified": 9,
+"lat_median": 6.510949415056132
+},
+"B2": {
+"n": 52,
+"rate": 0.0,
+"verified": 0,
+"lat_median": null
+},
+"CG": {
+"n": 52,
+"rate": 0.8846153846153846,
+"verified": 46,
+"lat_median": 4.532144675295193
+}
+},
+"syncope_eyes_open": {
+"B1": {
+"n": 78,
+"rate": 0.02564102564102564,
+"verified": 2,
+"lat_median": 6.665804425807956
+},
+"B2": {
+"n": 78,
+"rate": 0.0,
+"verified": 0,
+"lat_median": null
+},
+"CG": {
+"n": 78,
+"rate": 0.9487179487179487,
+"verified": 74,
+"lat_median": 4.433778407181592
+}
+},
+"syncope_upright": {
+"B1": {
+"n": 30,
+"rate": 0.4,
+"verified": 12,
+"lat_median": 6.495463747218039
+},
+"B2": {
+"n": 30,
+"rate": 0.06666666666666667,
+"verified": 2,
+"lat_median": 18.746631466738513
+},
+"CG": {
+"n": 30,
+"rate": 0.6666666666666666,
+"verified": 20,
+"lat_median": 14.343312603802126
+}
+},
+"seizure_gtcs": {
+"B1": {
+"n": 72,
+"rate": 0.9583333333333334,
+"verified": 69,
+"lat_median": 7.535705976862928
+},
+"B2": {
+"n": 72,
+"rate": 0.4027777777777778,
+"verified": 29,
+"lat_median": 7.656310211935882
+},
+"CG": {
+"n": 72,
+"rate": 1.0,
+"verified": 72,
+"lat_median": 6.480899896153897
+}
+},
+"normal_false": {
+"B1": 0,
+"B2": 0
+}
+}
+ablations {
+"full": {
+"seizure": {
+"rate": 0.86,
+"lat": 6.50606081214039,
+"final_correct": 86
+},
+"syncope": {
+"rate": 0.91,
+"lat": 4.514008408655997,
+"final_correct": 91
+},
+"stroke": {
+"rate": 0.94,
+"lat": 13.76284386691843,
+"final_correct": 93
+},
+"hypoglycemia": {
+"rate": 0.85,
+"lat": 185.47831011733996,
+"final_correct": 84
+},
+"false_verifications": 1,
+"fv_per_h": 0.10909090909090781,
+"imu_rhythmic_on_rough_road": 0.006216506125430922
+},
+"no_reference_imu": {
+"seizure": {
+"rate": 0.75,
+"lat": 6.4995562871085895,
+"final_correct": 70
+},
+"syncope": {
+"rate": 0.91,
+"lat": 4.514008408655997,
+"final_correct": 91
+},
+"stroke": {
+"rate": 0.94,
+"lat": 13.76284386691843,
+"final_correct": 93
+},
+"hypoglycemia": {
+"rate": 0.85,
+"lat": 185.47831011733996,
+"final_correct": 84
+},
+"false_verifications": 0,
+"fv_per_h": 0.0,
+"imu_rhythmic_on_rough_road": 0.0020498413742215406
+},
+"no_telemetry": {
+"seizure": {
+"rate": 0.85,
+"lat": 6.738033474419375,
+"final_correct": 85
+},
+"syncope": {
+"rate": 0.73,
+"lat": 4.342312694159503,
+"final_correct": 73
+},
+"stroke": {
+"rate": 0.94,
+"lat": 13.76284386691843,
+"final_correct": 94
+},
+"hypoglycemia": {
+"rate": 0.01,
+"lat": 60.82104858894874,
+"final_correct": 0
+},
+"false_verifications": 1,
+"fv_per_h": 0.10909090909090781,
+"imu_rhythmic_on_rough_road": 0.006216506125430922
+},
+"camera_only": {
+"seizure": {
+"rate": 0.0,
+"lat": null,
+"final_correct": 0
+},
+"syncope": {
+"rate": 0.0,
+"lat": null,
+"final_correct": 0
+},
+"stroke": {
+"rate": 0.94,
+"lat": 13.76284386691843,
+"final_correct": 94
+},
+"hypoglycemia": {
+"rate": 0.0,
+"lat": null,
+"final_correct": 0
+},
+"false_verifications": 0,
+"fv_per_h": 0.0,
+"imu_rhythmic_on_rough_road": 0.006216506125430922
+},
+"imu_telemetry_no_camera": {
+"seizure": {
+"rate": 0.74,
+"lat": 6.677395696890926,
+"final_correct": 45
+},
+"syncope": {
+"rate": 0.75,
+"lat": 14.02929336135827,
+"final_correct": 71
+},
+"stroke": {
+"rate": 0.07,
+"lat": 40.603847313061706,
+"final_correct": 0
+},
+"hypoglycemia": {
+"rate": 0.54,
+"lat": 189.6811594275957,
+"final_correct": 54
+},
+"false_verifications": 0,
+"fv_per_h": 0.0,
+"imu_rhythmic_on_rough_road": 0.006216506125430922
+}
+}
+sweep [{'loc_verify_s': 1.0, 'syncope_rate': 0.97, 'syncope_lat': 2.5357204717475526, 'fv': 1, 'fv_h': np.float64(0.10909090909090781), 'hours': np.float64(9.166666666666774), 'prompts_h': np.float64(20.29090909090885)}, {'loc_verify_s': 2.0, 'syncope_rate': 0.95, 'syncope_lat': 3.5327270761528524, 'fv': 1, 'fv_h': np.float64(0.10909090909090781), 'hours': np.float64(9.166666666666774), 'prompts_h': np.float64(20.29090909090885)}, {'loc_verify_s': 3.0, 'syncope_rate': 0.91, 'syncope_lat': 4.514008408655997, 'fv': 1, 'fv_h': np.float64(0.10909090909090781), 'hours': np.float64(9.166666666666774), 'prompts_h': np.float64(20.29090909090885)}, {'loc_verify_s': 4.0, 'syncope_rate': 0.9, 'syncope_lat': 5.510457992301852, 'fv': 1, 'fv_h': np.float64(0.10909090909090781), 'hours': np.float64(9.166666666666774), 'prompts_h': np.float64(20.29090909090885)}, {'loc_verify_s': 5.0, 'syncope_rate': 0.9, 'syncope_lat': 6.510457992301866, 'fv': 1, 'fv_h': np.float64(0.10909090909090781), 'hours': np.float64(9.166666666666774), 'prompts_h': np.float64(20.29090909090885)}]
+gen check {'syncope_n': 100, 'eyes_open': 0.78, 'myoclonus': 0.91, 'pedal_sustained': 0.52, 'collapse': 0.9, 'transient_loc_median_s': 12.263759445551662}
+confusion {'seizure': {'seizure': 86, 'syncope': 0, 'stroke': 0, 'hypoglycemia': 0, 'ADI-unspecified': 0, 'missed': 14}, 'syncope': {'seizure': 0, 'syncope': 91, 'stroke': 0, 'hypoglycemia': 0, 'ADI-unspecified': 0, 'missed': 9}, 'stroke': {'seizure': 0, 'syncope': 0, 'stroke': 93, 'hypoglycemia': 1, 'ADI-unspecified': 0, 'missed': 6}, 'hypoglycemia': {'seizure': 1, 'syncope': 0, 'stroke': 0, 'hypoglycemia': 84, 'ADI-unspecified': 0, 'missed': 15}}

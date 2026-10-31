@@ -1,0 +1,114 @@
+{
+ "trace_syncope": {
+  "seed": 300001,
+  "result": {
+   "verified": true,
+   "latency": 6.078454921765115,
+   "s1_latency": 3.1784549217650664,
+   "label": "syncope",
+   "label_latency": 6.078454921765115,
+   "final_label": "syncope",
+   "false_verifications": 0,
+   "prompts": 0,
+   "fatigue": 0,
+   "exposure_h": 0.014700429188398811
+  },
+  "truth": {
+   "cls": "syncope",
+   "onset": 72.92154507823572,
+   "seed": 300001,
+   "variant": "upright",
+   "collapse": false,
+   "eyes_open": true,
+   "myoclonus": false,
+   "pedal_sustained": true,
+   "persistent": true,
+   "loc_dur": Infinity,
+   "drowsy": []
+  }
+ },
+ "trace_seizure": {
+  "seed": 301003,
+  "result": {
+   "verified": true,
+   "latency": 6.446337391893707,
+   "s1_latency": 3.5463373918936725,
+   "label": "ADI-unspecified",
+   "label_latency": 13.746337391893803,
+   "final_label": "seizure",
+   "false_verifications": 0,
+   "prompts": 0,
+   "fatigue": 0,
+   "exposure_h": 0.012542684057807507
+  },
+  "truth": {
+   "cls": "seizure",
+   "onset": 65.15366260810703,
+   "seed": 301003,
+   "variant": "gtcs",
+   "tonic": 10.162127672524061,
+   "clonic": 49.869128144520104,
+   "pedal_press": false,
+   "version": 36.180692977517275,
+   "belt_amp": 2.424030674343945,
+   "drowsy": []
+  }
+ },
+ "droop": {
+  "deltas": [
+   0.005,
+   0.01,
+   0.015,
+   0.02,
+   0.025,
+   0.03,
+   0.04,
+   0.06,
+   0.09
+  ],
+  "rate": [
+   0.0,
+   0.0,
+   0.0,
+   0.275,
+   0.875,
+   0.95,
+   0.975,
+   1.0,
+   0.975
+  ],
+  "lat": [
+   null,
+   null,
+   null,
+   22.159938466258225,
+   21.674897820404396,
+   16.498905812819658,
+   17.31727995975907,
+   18.0243766724739,
+   12.57452703793193
+  ],
+  "n_each": 40
+ },
+ "syncope_misses": {
+  "n": 100,
+  "missed": 9,
+  "missed_transient": 9,
+  "missed_loc_s": [
+   5.7,
+   12.9,
+   11.9,
+   8.0,
+   4.5,
+   4.5,
+   7.0,
+   5.0,
+   11.7
+  ],
+  "missed_upright": 4,
+  "persistent_rate": 1.0,
+  "transient_rate": 0.8269230769230769,
+  "transient_ge10_rate": 0.918918918918919,
+  "n_persistent": 48
+ }
+}

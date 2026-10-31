@@ -1,0 +1,375 @@
+{
+ "quick": false,
+ "p_thr": 0.9,
+ "threshold_grid_dev": [
+  {
+   "p_thr": 0.4,
+   "mean_detection": 0.9833333333333334,
+   "fv_rate": 7.8545454545453595
+  },
+  {
+   "p_thr": 0.5,
+   "mean_detection": 0.975,
+   "fv_rate": 4.90909090909085
+  },
+  {
+   "p_thr": 0.6,
+   "mean_detection": 0.9666666666666667,
+   "fv_rate": 2.1272727272727012
+  },
+  {
+   "p_thr": 0.7,
+   "mean_detection": 0.9333333333333333,
+   "fv_rate": 1.1454545454545315
+  },
+  {
+   "p_thr": 0.8,
+   "mean_detection": 0.9,
+   "fv_rate": 0.3272727272727233
+  },
+  {
+   "p_thr": 0.9,
+   "mean_detection": 0.8333333333333334,
+   "fv_rate": 0.0
+  }
+ ],
+ "rules_dev_fv_budget": 0.16363636363636164,
+ "ml": {
+  "seizure": {
+   "n": 100,
+   "verified": 81,
+   "rate": 0.81,
+   "ci": [
+    0.7193020420263876,
+    0.8815568038674564
+   ],
+   "lat_median": 3.401566062224873,
+   "final_label_correct": 81
+  },
+  "syncope": {
+   "n": 100,
+   "verified": 95,
+   "rate": 0.95,
+   "ci": [
+    0.8871650888945373,
+    0.9835681208179479
+   ],
+   "lat_median": 4.210305076677486,
+   "final_label_correct": 95
+  },
+  "stroke": {
+   "n": 100,
+   "verified": 66,
+   "rate": 0.66,
+   "ci": [
+    0.5584667322490411,
+    0.7517764984551558
+   ],
+   "lat_median": 6.508237250845713,
+   "final_label_correct": 66
+  },
+  "hypoglycemia": {
+   "n": 100,
+   "verified": 99,
+   "rate": 0.99,
+   "ci": [
+    0.9455406146079194,
+    0.9997468539670226
+   ],
+   "lat_median": 123.62200758036532,
+   "final_label_correct": 99
+  },
+  "normal": {
+   "n": 150,
+   "hours": 9.166666666666774,
+   "false_verifications": 1,
+   "fv_rate": 0.10909090909090781,
+   "fv_upper95": 0.5175124929153296,
+   "total_fv": 1,
+   "total_hours": 14.245268697600967,
+   "total_fv_rate": 0.07019874606987295
+  }
+ },
+ "rules": {
+  "seizure": {
+   "n": 100,
+   "verified": 86,
+   "rate": 0.86,
+   "ci": [
+    0.7762720186294323,
+    0.9212945950730342
+   ],
+   "lat_median": 6.50606081214039,
+   "final_label_correct": 86
+  },
+  "syncope": {
+   "n": 100,
+   "verified": 91,
+   "rate": 0.91,
+   "ci": [
+    0.8360177449703647,
+    0.9580164043716077
+   ],
+   "lat_median": 4.514008408655997,
+   "final_label_correct": 91
+  },
+  "stroke": {
+   "n": 100,
+   "verified": 94,
+   "rate": 0.94,
+   "ci": [
+    0.8739700654191771,
+    0.9776651139286836
+   ],
+   "lat_median": 13.76284386691843,
+   "final_label_correct": 93
+  },
+  "hypoglycemia": {
+   "n": 100,
+   "verified": 85,
+   "rate": 0.85,
+   "ci": [
+    0.7646924998510451,
+    0.9135456143583515
+   ],
+   "lat_median": 185.47831011733996,
+   "final_label_correct": 84
+  },
+  "normal": {
+   "n": 150,
+   "hours": 9.166666666666774,
+   "false_verifications": 1,
+   "fv_rate": 0.10909090909090781,
+   "fv_upper95": 0.5175124929153296,
+   "total_fv": 2,
+   "total_hours": 14.245268697600967,
+   "total_fv_rate": 0.1403974921397459
+  }
+ },
+ "step_confusion": {
+  "labels": [
+   "normal",
+   "seizure",
+   "syncope",
+   "stroke",
+   "hypoglycemia"
+  ],
+  "matrix": [
+   [
+    490978,
+    170,
+    136,
+    3642,
+    18099
+   ],
+   [
+    8894,
+    50851,
+    21,
+    57,
+    177
+   ],
+   [
+    3407,
+    4,
+    51649,
+    492,
+    4448
+   ],
+   [
+    10153,
+    38,
+    136,
+    48761,
+    912
+   ],
+   [
+    83836,
+    66,
+    655,
+    1806,
+    181826
+   ]
+  ]
+ },
+ "step_report": {
+  "normal": {
+   "precision": 0.8220396873765211,
+   "recall": 0.9570254860874227,
+   "f1-score": 0.8844115922553777,
+   "support": 513025.0
+  },
+  "seizure": {
+   "precision": 0.9945627725948092,
+   "recall": 0.8475166666666667,
+   "f1-score": 0.9151706575241386,
+   "support": 60000.0
+  },
+  "syncope": {
+   "precision": 0.9819761583360268,
+   "recall": 0.8608166666666667,
+   "f1-score": 0.9174134301979626,
+   "support": 60000.0
+  },
+  "stroke": {
+   "precision": 0.8904817560904342,
+   "recall": 0.8126833333333333,
+   "f1-score": 0.8498056780355182,
+   "support": 60000.0
+  },
+  "hypoglycemia": {
+   "precision": 0.8849616960800537,
+   "recall": 0.67797709824042,
+   "f1-score": 0.7677636065373028,
+   "support": 268189.0
+  },
+  "accuracy": 0.8573168930123781,
+  "macro avg": {
+   "precision": 0.914804414095569,
+   "recall": 0.8312038501989019,
+   "f1-score": 0.8669129929100599,
+   "support": 961214.0
+  },
+  "weighted avg": {
+   "precision": 0.8646203073900603,
+   "recall": 0.8573168930123781,
+   "f1-score": 0.8536854404283595,
+   "support": 961214.0
+  }
+ },
+ "feature_importance": [
+  [
+   "lane_ratio",
+   0.16470686158523462
+  ],
+  [
+   "asym_d",
+   0.1264358376085038
+  ],
+  [
+   "asym_z",
+   0.10895132705006004
+  ],
+  [
+   "hf_ratio",
+   0.07842887950295518
+  ],
+  [
+   "energy_z",
+   0.07714056171595879
+  ],
+  [
+   "tilt",
+   0.06275957288238967
+  ],
+  [
+   "gaze_ratio",
+   0.06000076953765052
+  ],
+  [
+   "perclos",
+   0.049931725671007635
+  ],
+  [
+   "micro_ratio",
+   0.04069726039930778
+  ],
+  [
+   "rate_ratio",
+   0.031768026892780125
+  ],
+  [
+   "yaw_dev_run",
+   0.028340831070140873
+  ],
+  [
+   "band_ratio",
+   0.022566851154829374
+  ],
+  [
+   "abrupt",
+   0.021333924909453607
+  ],
+  [
+   "face_rhythm",
+   0.020549649050522586
+  ],
+  [
+   "imu_rhythm",
+   0.020309046036341084
+  ],
+  [
+   "quiet_ratio",
+   0.018579342967802323
+  ],
+  [
+   "frozen_run",
+   0.014650063425345456
+  ],
+  [
+   "pitch_drop",
+   0.01459273565492567
+  ],
+  [
+   "steer_rhythm",
+   0.012065223472397468
+  ],
+  [
+   "gaze",
+   0.00765248496304909
+  ],
+  [
+   "res_norm",
+   0.006448921309069986
+  ],
+  [
+   "stare",
+   0.00588720584058315
+  ],
+  [
+   "closed_run",
+   0.0047326132455390415
+  ],
+  [
+   "face_ok",
+   0.0014702840541521785
+  ]
+ ],
+ "features": [
+  "band_ratio",
+  "quiet_ratio",
+  "hf_ratio",
+  "imu_rhythm",
+  "tilt",
+  "res_norm",
+  "closed_run",
+  "stare",
+  "perclos",
+  "pitch_drop",
+  "yaw_dev_run",
+  "face_ok",
+  "asym_z",
+  "asym_d",
+  "energy_z",
+  "face_rhythm",
+  "gaze",
+  "gaze_ratio",
+  "frozen_run",
+  "rate_ratio",
+  "steer_rhythm",
+  "micro_ratio",
+  "abrupt",
+  "lane_ratio"
+ ],
+ "settings": {
+  "subsample": 5,
+  "verify_s": 3.0,
+  "rf": {
+   "n_estimators": 300,
+   "min_samples_leaf": 5,
+   "class_weight": "balanced_subsample",
+   "random_state": 0,
+   "n_jobs": -1
+  }
+ }
+}
